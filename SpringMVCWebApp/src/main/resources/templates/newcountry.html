@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>New Country</title>
+</head>
+<body>
+	<form action="#" th:action="@{/save}" th:object="${country}" method="post">
+			
+		Name: <input type="text" th:field="*{name}" />
+		
+		Capital: <input type="text" th:field="*{capital}"  />
+		
+		Population: <input type="text" th:field="*{population}"  />
+	
+		<button type="submit"]>Save</button>
+	</form>
+</body>
+</html>

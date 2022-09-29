@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Countries list</title>
+</head>
+<body>
+<ul>
+    <li th:each="country : ${countries}">
+        <a th:href="@{/country/{id}(id=${country.id})}">
+            <span th:text="${country.name}"></span>
+        </a>
+    </li>
+</ul>
+	<br>
+	<a href="/new">Add New Country</a>
+</body>
+</html>
